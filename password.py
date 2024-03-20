@@ -7,17 +7,27 @@ symbols = ['~','#','$','%','*','+']
 
 print("Welcome to Cynthia's password generator")
 
-nl= int(input('How many letters do you want?'))
+d= int(input('How many letters do you want?'))
 
-nn = int(input("How many numbers do you want?"))
+a = int(input("How many numbers do you want?"))
 
-ns= int(input("How many symbols do you want"))
+s= int(input("How many symbols do you want?"))
 
 
 #Easy level
 
 password=""
 
-for char in range (1,nl+ 1):
+for char in range (0,d):
     pas= random.choice(letters)
     password +=pas
+
+for num in range(0,a):
+    pas=random.choice(numbers)
+    password +=pas
+
+for sym in range(0,s):
+    pas= random.choice(symbols)
+    password +=pas
+print(password)
+
