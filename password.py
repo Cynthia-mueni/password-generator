@@ -16,19 +16,25 @@ s= int(input("How many symbols do you want?"))
 
 #Easy level
 
-password=""
+password_list=[]
 
 for char in range (0,d):
     pas= random.choice(letters)
-    password +=pas
+    password_list +=pas
 
 for num in range(0,a):
     pas=random.choice(numbers)
-    password +=pas
+    password_list +=pas
 
 for sym in range(0,s):
     pas= random.choice(symbols)
-    password +=pas
-print(password)
-
+    password_list +=pas
+    
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
+password=""
+for char in password_list:
+    password += char
+    print(password)
 
